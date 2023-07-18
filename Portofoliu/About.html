@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="CSS1/about.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+    
+    <body>
+     <div class="header1">
+            <div class="mylogo wave-animation">MyPortofolio</div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="file:///C:/Users/stirb/Desktop/HTML+CSS/Portofoliu/Portofoliu.html" target="_blank">Home</a></li>
+                    <li><a href="file:///C:/Users/stirb/Desktop/HTML+CSS/Portofoliu/About.html" target="_blank">About</a></li>
+                    <li><a href="file:///C:/Users/stirb/Desktop/HTML+CSS/Portofoliu/Skills.html" target="_blank">Skills</a></li>
+                    <li><a href="file:///C:/Users/stirb/Desktop/HTML+CSS/Portofoliu/Contact.html" target="_blank">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section class="section1">
+        <article class="article1">
+            <p>
+            Hello! I am a 3rd-year student pursuing a degree in Electronics, Telecommunication, and Information Technology. Throughout my academic journey, I have developed a strong interest in Web Development. I find great joy in creating visually appealing and interactive websites that provide a seamless user experience.</p>
+            </article>
+            <article class="article2">
+                <i class="fa-solid fa-laptop"></i>
+                <i class="fa-solid fa-microchip"></i>
+            </article>
+        </section>
+        <section class="section2">
+        <h1 class="reveal">My passions</h1>
+            <h1 class="hm reveal">Rock music</h1>
+   <p class="passion-description reveal">I have always been deeply passionate about rock music. The raw energy, powerful guitar riffs, and meaningful lyrics have captivated me since I was young. It's a genre that speaks to my soul and resonates with the rebellious spirit within me. The electrifying atmosphere of a live rock concert, the adrenaline rush of headbanging to my favorite tunes, and the sense of community among fellow rock enthusiasts are experiences that fuel my love for this music.</p>
+             <button onclick="displayText()" class="Fact reveal">Fun Fact</button>
+      <h1 id="wow" class="show-wow">I play quitar!</h1>
+           <img src="a1f91ba50ef292ddc25e3c392124e9cf.jpg" class="img1"/>
+        </section>
+        <section class="section3">
+        <h1 class="hn reveal">Chess</h1>
+        <img src="istockphoto-1128789429-612x612.jpg" class="img1"/>
+        <p class="reveal">From the moment I first laid eyes on a chessboard, a deep and unyielding passion for the game was ignited within me. Even as a child, the allure of the chess pieces and the complex strategies they represented fascinated me. It was during those early years that I found myself playing countless games alongside my grandpa, who patiently guided me through the intricacies of each move.</p>
+        </section>
+        <section class="section4">
+            <h1 class="hx reveal">Gym</h1>
+        <img class="img1" src="istockphoto-1322158059-612x612.jpg"/>
+            <p class="reveal">
+Despite being overweight during high school, I took control of my life and decided to make a change. Determined to improve my health and overall well-being, I committed myself to a regular gym routine. Through consistent exercise, dedication, and a healthy lifestyle, I began to transform my body. Over time, I shed the excess weight and gained strength, both physically and mentally. The gym became a life changer, where I pushed myself to new limits and embraced the challenges.</p>
+        </section>
+      <footer>Let's build something great togheter</footer>
+<script>
+  window.addEventListener('scroll',reveal);
+    function reveal()
+    {
+        var reveals=document.querySelectorAll('.reveal');
+        for(var i=0; i < reveals.length;i++)
+            {
+                var windowheight=window.innerHeight;
+                var revealtop= reveals[i].getBoundingClientRect().top;
+                var revealpoint=150;
+                if(revealtop<windowheight-revealpoint)
+                    {
+                        reveals[i].classList.add('active');
+                    }
+                else
+                    {
+                        reveals[i].classList.remove('active');
+                    }
+            }
+    }
+    
+  const images= document.querySelectorAll('.img1');
+    window.addEventListener('scroll',checkBoxes);
+    checkBoxes();
+    function checkBoxes()
+    {
+        const triggerBottom=window.innerHeight/5*4;
+        images.forEach(box=>{
+            const boxTop=box.getBoundingClientRect().top;
+            if(boxTop <triggerBottom)
+                {
+                    box.classList.add('show');
+                }
+            else
+                {
+                    box.classList.remove('show');
+                }
+        });
+    }
+    
+  function displayText() {
+  var text = document.getElementById("wow");
+  text.style.display = "block";
+}
+     
+        const myLogoElement = document.querySelector(".mylogo");
+        myLogoElement.addEventListener("click", () => {
+            myLogoElement.classList.toggle("paused"); 
+        });
+    
+</script>
+
+    </body>
+</html>
